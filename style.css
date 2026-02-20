@@ -1,0 +1,88 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background: black;
+}
+
+/* Intro Screen */
+#intro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.logo-text {
+    font-size: 70px;
+    font-weight: bold;
+    color: #ffbb00;
+    letter-spacing: 8px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 20px #00c6ff;
+}
+
+.frost-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(173,216,230,0.6), transparent 70%);
+    animation: frostSpread 3s forwards;
+}
+
+@keyframes frostSpread {
+    0% { transform: scale(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+/* Hide Main Initially */
+.hidden {
+    display: none;
+}
+
+/* Login Styles */
+#main-content {
+    background: radial-gradient(circle at top, #9b523f, #8d509f, #a94b63);
+    height: 100vh;
+}
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.login-card {
+    background: rgba(200, 15, 15, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 420px;
+    color: white;
+}
+
+.winter-input {
+    background: rgba(19, 170, 208, 0.15);
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+}
+
+.winter-input:focus {
+    box-shadow: 0 0 15px #ffbb9b;
+    border-color: #9be7ff;
+}
+
+.btn-winter {
+    background: linear-gradient(45deg, #ff5100, #ff5100);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+}
